@@ -67,8 +67,6 @@ contract GatewayTest is Test {
     function testRouterAllowingRouter() public {
         uint bridgeTokenAmount = 1_000 * 1 ether;
 
-        console.logAddress(router.getERC20Gateway(address(myToken)));
-
         myToken.approve(
             address(router),
             bridgeTokenAmount);
@@ -83,8 +81,6 @@ contract GatewayTest is Test {
 
     function testRouterAllowingDefaultGateway() public {
         uint bridgeTokenAmount = 1_000 * 1 ether;
-
-        console.logAddress(router.getERC20Gateway(address(myToken)));
 
         myToken.approve(
             address(defaultERC20Gateway),
